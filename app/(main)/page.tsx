@@ -94,7 +94,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col justify-center items-center">
-              <div className="w-full flex justify-center items-center relative cursor">
+              <div className="w-full flex justify-center items-center relative cursor max-w-[1007px]">
                 <video
                   ref={videoRef}
                   poster={"https://utfs.io/f/3cc1bb83-ec21-4b41-b6fd-23ec2604e6dc-14x2yi.png"}
@@ -102,7 +102,7 @@ export default function Home() {
                   loop
                   controls
                   src={"https://utfs.io/f/27a8aec8-71ab-436c-b806-b7f69cd70006-cq11r5.mp4"}
-                  className="h-[544px] w-[90%] md:w-[67%] object-cover mt-[70px] cursor-pointer"
+                  className="h-[544px] w-[90%] md:w-[100%] object-cover mt-[70px] cursor-pointer"
                   onPlay={() => setVideoPause(false)}
                   onPause={() => setVideoPause(true)}
                 />
@@ -115,7 +115,7 @@ export default function Home() {
                   onClick={playVideo}
                 />
               </div>
-              <p className="max-w-[1007px] w-[100%] md:w-[74%] px-10 md:p-10 my-[40px] text-[16px] text-[#262626] text-center font-normal tracking-[1px] leading-[28px]" data-aos="fade-in">
+              <p className="max-w-[1007px] w-[100%] md:w-[74%] px-10 md:py-10 md:px-0 my-[40px] text-[16px] text-[#262626] text-center font-normal tracking-[1px] leading-[28px]" data-aos="fade-in">
                 Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.
               </p>
               <div className="w-[223px] h-[86px] bg-[#26C6D0] flex items-center justify-center gap-5 rounded-l">
