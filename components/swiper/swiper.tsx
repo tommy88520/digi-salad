@@ -1,63 +1,28 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { useState } from 'react';
+import { Navigation, Pagination } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from "next/image";
 
-// Import Swiper styles
+import { slides } from '@/data/data'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import styles from './swiper.module.css'
-import { useState } from 'react';
 
 const TSwiper = () => {
 
-  const slideItem = {
-    img: 'https://utfs.io/f/75063d24-dac3-47e6-9e55-fd7c4f1c221d-hhjpr2.jpg',
-    slogan: 'HIGHLIGHTED SHOWCASE',
-    title: 'LP CLUB MOBILE APP',
-    content: "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus."
-  }
   const [slideIndex, setSlideIndex ] = useState(1)
-  const slides = [
-    {
-      ...slideItem,
-      id: 1
-    },
-    {
-      ...slideItem,
-      id: 2
-    },
-    {
-      ...slideItem,
-      id: 3
-    },
-    {
-      ...slideItem,
-      id: 4
-    },
-  ]
+  
   return (
     <Swiper
-      // install Swiper modules
       modules={[Pagination, Navigation]}
-      // spaceBetween={50}
       navigation
       pagination={{ clickable: true }}
       onSwiper={(swiper) => {}}
       onSlideChange={(swiper) => setSlideIndex(swiper.activeIndex + 1)}
       className="custom-arrow"
     >
-      {/* <Swiper
-        pagination={{
-          type: 'progressbar',
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper "
-      >
-      </Swiper> */}
       {
         slides.map((e)=>{
           return (

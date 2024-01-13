@@ -8,8 +8,6 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import NavigationBar from "./navigation-bar";
-import useScrollDirection from "use-scroll-direction";
-import { useCallback, useEffect, useState } from "react";
 import { cn } from "@/lib/utils"
 import { useScroll } from '@/hooks/use-scroll'
 import Image from "next/image";
@@ -18,7 +16,6 @@ import Image from "next/image";
 const Navigation = () => {
 
   const { scrollDir, y } = useScroll()
-
 
   return (
     <div className={cn("w-full flex just items-center justify-between bg-white/[.001] transition", scrollDir == "down" && "bg-white")}>

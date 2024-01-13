@@ -1,143 +1,23 @@
 "use client"
 
 import Image from "next/image";
-import styles from "../page.module.css";
-import { useEffect, useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
+import { useRef, useState } from "react";
 import TSwiper from "@/components/swiper/swiper";
 import { cn } from '@/lib/utils'
+import { services, awards } from '@/data/data'
 
 
 
 export default function Home() {
 
-  const [ videoPause, setVideoPause ] = useState<boolean>(false)
-
-  const awards = [
-    {
-      id: 1,
-      url: 'https://utfs.io/f/0b92bc17-1e2f-4520-9fce-105986cb0c7c-vmbbu4.png'
-    },
-    {
-      id: 2,
-      url: 'https://utfs.io/f/0b92bc17-1e2f-4520-9fce-105986cb0c7c-vmbbu4.png'
-    },
-    {
-      id: 3,
-      url: 'https://utfs.io/f/0b92bc17-1e2f-4520-9fce-105986cb0c7c-vmbbu4.png'
-    },
-    {
-      id: 4,
-      url: 'https://utfs.io/f/0b92bc17-1e2f-4520-9fce-105986cb0c7c-vmbbu4.png'
-    }
-  ]
-
-  const content = 'Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.'
-  const services = [
-    {
-      id: 1,
-      img: 'https://utfs.io/f/a9d7469e-b219-41f3-b8b4-673e61f2b483-sweqd0.jpg',
-      title: 'ux design',
-      size: {
-        width: 49,
-        height: 72
-      },
-      content,
-    },
-    {
-      id: 2,
-      img: 'https://utfs.io/f/6957ad61-771d-49b5-b462-03077769716f-sweqc5.jpg',
-      title: 'UI Design',
-      size: {
-        width: 63,
-        height: 63
-      },
-      content,
-    },
-    {
-      id: 3,
-      img: 'https://utfs.io/f/e96a032c-3575-4924-bade-1337e39aae21-hhjq2e.jpg',
-      title: 'website development',
-      size: {
-        width: 82,
-        height: 42
-      },
-      content,
-    },
-    {
-      id: 4,
-      img: 'https://utfs.io/f/8fe0f753-5026-4380-93a9-5d2610daa0b5-14kgnh.jpg',
-      title: 'mobile app development',
-      size: {
-        width: 38,
-        height: 73
-      },
-      content,
-    },
-    {
-      id: 5,
-      img: 'https://utfs.io/f/99b1ef0f-da73-4402-8f62-cdc4bce3a22f-hhjq29.jpg',
-      title: 'ecommerce',
-      size: {
-        width: 56,
-        height: 56
-      },
-      content,
-    },
-    {
-      id: 6,
-      img: 'https://utfs.io/f/16fa1dd2-6b82-4e79-a22c-c250ade1ba4e-sweqdv.svg',
-      title: 'customer loyalty',
-      size: {
-        width: 61,
-        height: 67
-      },
-      content,
-    },
-    {
-      id: 7,
-      img: 'https://utfs.io/f/5b3dbefd-1542-4b15-879f-76e08877e3e8-hhjq2b.jpg',
-      title: 'digital transformation',
-      size: {
-        width: 61,
-        height: 61
-      },
-      content,
-    },
-    {
-      id: 8,
-      img: 'https://utfs.io/f/cac2a4ca-79ee-4649-b909-37067264c579-hhjq2c.jpg',
-      title: 'digital marketing',
-      size: {
-        width: 31,
-        height: 60
-      },
-      content,
-    }
-    ,
-    {
-      id: 9,
-      img: 'https://utfs.io/f/e66897b3-ed35-40af-aa79-179be751eb31-hhjq2d.jpg',
-      title: 'BRANDING',
-      size: {
-        width: 47,
-        height: 63
-      },
-      content,
-    }
-  ]
-
+  const [ videoPause, setVideoPause ] = useState<boolean>(true)
   const videoRef = useRef<HTMLVideoElement>(null);
-
-
 
   const playVideo = () => {
     if (videoRef.current) {
       if (videoRef.current.paused) {
-        videoRef.current.play();
         setVideoPause(false)
       } else {
-        videoRef.current.pause();
         setVideoPause(true)
       }
 
@@ -213,22 +93,16 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col justify-center items-center">
-              <div className="w-full flex justify-center items-center relative cursor" onClick={playVideo}>
-                {/* <video
-                  ref={videoRef}
-                  src="/_next/static/videos/DigiSalad Website Video-v3-ea91612166c5adc48d7baf351b6a8012.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  className="h-[544px] w-[90%] md:w-[67%] object-cover mt-[70px] cursor-pointer"
-                /> */}
+              <div className="w-full flex justify-center items-center relative cursor">
                 <video
-                  // poster={data?.thumbnailUrl}
-                  autoPlay
+                  ref={videoRef}
+                  poster={"https://utfs.io/f/3cc1bb83-ec21-4b41-b6fd-23ec2604e6dc-14x2yi.png"}
                   muted
                   loop
-                  src={"https://utfs.io/f/806af516-16a3-4ad3-a577-a57bd2920ef9-1v6fae.mp4"}
-                  className="w-full brightness-[60%] object-cover h-full"
+                  controls
+                  src={"https://utfs.io/f/27a8aec8-71ab-436c-b806-b7f69cd70006-cq11r5.mp4"}
+                  className="h-[544px] w-[90%] md:w-[67%] object-cover mt-[70px] cursor-pointer"
+                  onClick={playVideo}
                 />
                 <Image
                   src="https://utfs.io/f/46382f95-e401-4a06-aaef-12bfe3a95095-qqupd4.svg"
