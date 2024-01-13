@@ -5,18 +5,19 @@ import { cn } from '@/lib/utils'
 interface TextBlockProps {
   describe: string;
   title: string;
-  color: string;
+  color?: string;
   titleColor?: string;
   dot?: string;
-  dotPosition?: string;
+  className?: string;
+
 }
-const TextBlock = ({describe, title, color = "text-white", dot = "bg-[#EE6C8A]", titleColor = "", dotPosition }: TextBlockProps ) => {
+const TextBlock = ({describe, title, color = "text-white", dot = "bg-[#EE6C8A]", titleColor = "", className }: TextBlockProps ) => {
   return (
     <div className={cn("uppercase", color)}>
-      <p className="text-[16px] tracking-[1.8px] py-3">{describe}</p>
-      <h2 className={cn("text-[32px] font-bold tracking-[3.64px] relative w-auto", titleColor)}>
+      <p className="text-[16px] tracking-[1.8px] py-3 max-[1280px]:text-[12px] ">{describe}</p>
+      <h2 className={cn("text-[32px] font-bold tracking-[3.64px] relative w-auto max-[1280px]:text-[28px] ", titleColor)}>
         {title}
-        <div className={cn("w-[10px] h-[10px] rounded-full absolute bottom-2", dot, dotPosition)}/>  
+        <div className={cn("w-[10px] h-[10px] rounded-full absolute bottom-2", dot, className)}/>  
       </h2>
     </div>
   )
@@ -48,8 +49,7 @@ const NavigationBar = () => {
               <TextBlock 
                 describe="EMPOWERING BRANDS"
                 title="about us"
-                color="text-white"
-                dotPosition="right-[70px]"
+                className="right-[90px] md:right-[70px]"
               />
             </div>
           </div>
@@ -68,7 +68,7 @@ const NavigationBar = () => {
                 title="WORKS"
                 color="text-white"
                 dot="bg-[#26C6D0]"
-                dotPosition="right-[120px]"
+                className="right-[140px] md:right-[120px]"
               />
             </div>
           </div>
@@ -87,7 +87,7 @@ const NavigationBar = () => {
               describe="BE COOL WITH US"
               title="CAREERS"
               color="text-white"
-              dotPosition="right-[50px]"
+              className="right-[160px] md:right-[50px]"
             />
           </div>
           <div className="bg-[#26D0A8] flex flex-col justify-end pl-10 pb-5 md:pb-10 bg-[url('https://utfs.io/f/5b033e2c-011c-4cb8-a424-e00360c41eb5-ecksvw.svg')] w-[100%] md:w-[79%] h-[210px] md:h-[320px] bg-no-repeat bg-center rounded-3xl">
@@ -102,8 +102,7 @@ const NavigationBar = () => {
             <TextBlock 
               describe="OUR STRATEGIES"
               title="INSIGHTS"
-              color="text-white"
-              dotPosition="right-[140px]"
+              className="right-[160px] md:right-[60px]"
             />
           </div>
         </div>
@@ -120,8 +119,7 @@ const NavigationBar = () => {
             <TextBlock 
               describe="AREAS OF EXPERTISE"
               title="SERVICES"
-              color="text-white"
-              dotPosition="right-[130px]"
+              className="right-[150px] md:right-[130px]"
             />
           </div>
           <div className="bg-white flex items-end pl-10 pb-10 w-[380px] h-[210px] rounded-3xl">
@@ -131,7 +129,7 @@ const NavigationBar = () => {
                 title="CONTACT"
                 color="text-black"
                 titleColor="text-[#26C6D0]"
-                dotPosition="right-[100px]"
+                className="right-[50px] md:right-[100px]"
               />
             </div>
           </div>

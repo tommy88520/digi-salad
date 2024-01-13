@@ -47,7 +47,7 @@ export default function Home() {
                     DIGITAL EXPERIENCES
                   </div>
                   <div className="bg-[#26C6D0] w-full max-w-[300px] md:max-w-[571px] h-[4px] absolute bottom-[-100px] md:bottom-[-7px] left-[-5px] z-[-1]">
-                    <div className="w-[10px] h-[10px] rounded-full bg-[#EE6C8A] absolute right-[-20px] bottom-[0]"/>
+                    <div className="w-[10px] h-[10px] rounded-full bg-[#EE6C8A] absolute right-[-30px] bottom-[0]"/>
                   </div>
                 </div>
               </div>
@@ -59,7 +59,6 @@ export default function Home() {
                   className="absolute z-[-2] h-[940px] w-full object-cover"
                 />
             </div>
-            
             <div className="h-full w-full bg-[#000000] bg-opacity-30 z-[-10] absolute"/>
             <div 
               className="flex flex-col justify-center items-center absolute right-[50%] translate-x-[50%] bottom-[50px]" 
@@ -73,7 +72,6 @@ export default function Home() {
               <p className="uppercase text-white pt-4 pb-8 tracking-[2px] font-bold">taste us now!!</p>
             </div>
           </section>
-
           <section className="pt-[100px] pb-[446px] relative">
             <div className="absolute w-[1px] h-[86px] bg-[#808080] top-[-30px] left-[50%] translate-x-[50%]"/>
             <div className="flex flex-col justify-center items-center" data-aos="fade-in">
@@ -159,9 +157,6 @@ export default function Home() {
             </div>
             <div className="w-full h-[300px] md:h-[200px] bg-[#26C6D0] absolute bottom-0 rounded-t-[50px]"/>
           </section>
-
-          
-
           <section className="flex flex-col justify-center items-center bg-[#26C6D0] pt-[250px] min-[760px]:pt-[400px] min-[800px]:pt-[300px] min-[1280px]:pt-[100px] pb-[150px]">
             <div className="flex flex-col justify-center items-center" data-aos="fade-up">
               <p className="uppercase text-[28px] text-[white] font-bold tracking-[3.64px]">our ingradients</p>
@@ -172,7 +167,7 @@ export default function Home() {
                   src="https://utfs.io/f/d099b073-880f-4b77-b51a-3f824a3d23b3-9fxau9.svg"
                   alt="icon"
                 />
-                <div className="w-[10px] h-[10px] rounded-full bg-[#EE6C8A] absolute right-[20px] bottom-[20px]"/>
+                <div className="w-[10px] h-[10px] rounded-full bg-[#EE6C8A] absolute right-[10px] bottom-[20px]"/>
               </div>
             </div>
             <p className="text-white w-[82%] md:w-[70%] text-center mt-14 text-[16px] leading-[28px] tracking-[1px]" data-aos="fade-in">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
@@ -222,9 +217,7 @@ export default function Home() {
               <p className="uppercase text-white text-[18px] tracking-[2px] px-10 md:px-0">VIEW MORE DIGISALAD’S INGRADIENTS</p>
               <div className="w-[83%] md:w-[416px] h-[10px] bg-[#FFBC58] absolute bottom-[-2px] opacity-70 px-10 md:px-0 right-[9%] md:right-0"/>
             </div>
-
           </section>
-
           <section className="w-full">
             <div className="flex justify-center items-center relative">
               <div className="relative overflow-hidden mr-auto rounded-3xl md:rounded-tl-none w-full md:w-[90%] h-[750px] md:h-[590px]">
@@ -265,8 +258,6 @@ export default function Home() {
               <div className="w-full h-[300px] bg-[#26C6D0] absolute z-[-1] top-0 rounded-b-[50px]"/>
             </div>
           </section>
-
-
           <section className="flex flex-col justify-center items-center mt-[100px]">
             <div className="flex flex-col justify-center items-center" data-aos="fade-in">
               <p className="uppercase text-[28px] text-[#262626] font-bold tracking-[3.64px] px-3 md:px-0 text-center md:text-start">OUR BRAND EXPERIENCE</p>
