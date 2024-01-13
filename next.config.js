@@ -1,4 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const withVideos = require("next-videos");
 
-module.exports = nextConfig
+module.exports = withVideos({
+  webpack(config, options) {
+    return config;
+  },
+  images: {
+    domains: ["uploadthing.com", "utfs.io"],
+  },
+});
