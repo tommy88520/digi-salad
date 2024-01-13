@@ -216,7 +216,7 @@ export default function Home() {
               <div className="w-full flex justify-center items-center relative cursor" onClick={playVideo}>
                 <video
                   ref={videoRef}
-                  src={"/_next/static/videos/DigiSalad Website Video-v3-ea91612166c5adc48d7baf351b6a8012.mp4"}
+                  src="/_next/static/videos/DigiSalad Website Video-v3-ea91612166c5adc48d7baf351b6a8012.mp4"
                   autoPlay
                   muted
                   loop
