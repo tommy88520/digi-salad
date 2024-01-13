@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import TSwiper from "@/components/swiper/swiper";
 import { cn } from '@/lib/utils'
 import { services, awards } from '@/data/data'
@@ -14,15 +14,18 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const playVideo = () => {
-    if (videoRef.current) {
-      if (videoRef.current.paused) {
-        setVideoPause(false)
+    const video = videoRef.current;
+    if(video ) {
+      if (video.paused) {
+        video?.play();
+        setVideoPause(false);
       } else {
-        setVideoPause(true)
+        video.pause();
+        setVideoPause(true);
       }
-
     }
   };
+
     return (
         <main className="font-['Proxima Nova']">
           <section className="flex justify-center w-full relative rounded-b-[100px] overflow-hidden">
@@ -100,7 +103,8 @@ export default function Home() {
                   controls
                   src={"https://utfs.io/f/27a8aec8-71ab-436c-b806-b7f69cd70006-cq11r5.mp4"}
                   className="h-[544px] w-[90%] md:w-[67%] object-cover mt-[70px] cursor-pointer"
-                  onClick={playVideo}
+                  onPlay={() => setVideoPause(false)}
+                  onPause={() => setVideoPause(true)}
                 />
                 <Image
                   src="https://utfs.io/f/46382f95-e401-4a06-aaef-12bfe3a95095-qqupd4.svg"
@@ -108,6 +112,7 @@ export default function Home() {
                   height={113}
                   alt="player"
                   className={cn("absolute cursor-pointer", !videoPause &&  'hidden' )}
+                  onClick={playVideo}
                 />
               </div>
               <p className="max-w-[1007px] w-[100%] md:w-[74%] px-10 md:p-10 my-[40px] text-[16px] text-[#262626] text-center font-normal tracking-[1px] leading-[28px]" data-aos="fade-in">
