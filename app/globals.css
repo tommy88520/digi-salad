@@ -7,7 +7,7 @@ html {
   font-family: "Proxima Nova";
 }
 .swiper-button-next {
-  background-image: url(../public/right.svg);
+  background-image: url(../public/Right.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
