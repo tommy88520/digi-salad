@@ -28,7 +28,7 @@ const Navigation = () => {
         />
       </div>
       <div className={"w-[300px] flex items-center justify-end sm:justify-start gap-10 "}>
-        <div className="uppercase hidden sm:block text-white w-[200px] h-[41px] bg-gradient-to-r from-[#4EE5EA] to-[#26D0A8] rounded-3xl text-center leading-[41px] text-[14px] cursor-pointer">start your project</div>
+        <div className="uppercase hidden sm:block text-white w-[200px] h-[41px] bg-gradient-to-r from-[#4EE5EA] to-[#26D0A8] rounded-3xl text-center leading-[41px] text-[14px] cursor-pointer font-bold tracking-[1.14px]">start your project</div>
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className={cn("text-white", scrollDir == "down" && "text-[#585880]")}>

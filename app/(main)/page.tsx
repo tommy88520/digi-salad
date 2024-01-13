@@ -29,7 +29,7 @@ export default function Home() {
             <div className="flex justify-center w-full h-[940px] relative overflow-hidden">
               <div className="hidden md:flex absolute z-1 text-white items-center justify-center left-[-50px] top-[400px] transform rotate-[-90deg]">
                 <div className="bg-white h-[2px] w-[113px]"/>
-                <p className="text-[16px] pl-[30px] font-['Proxima Nova']" data-aos="zoom-out">DIGITAL AGENCY</p>
+                <p className="text-[16px] pl-[30px] font-bold tracking-[2.2px]" data-aos="zoom-out">DIGITAL AGENCY</p>
               </div>
               <div className="w-2/3 pt-[200px]" data-aos="zoom-out">
                 <Image
@@ -70,7 +70,7 @@ export default function Home() {
                 src={"https://utfs.io/f/922f4662-6fc5-4536-a326-5f5a7496abd1-14kgnh.svg"}
                 alt="icon"
               />
-              <p className="uppercase text-white pt-4 pb-8 font-['Proxima Nova']">taste us now!!</p>
+              <p className="uppercase text-white pt-4 pb-8 tracking-[2px] font-bold">taste us now!!</p>
             </div>
           </section>
 
@@ -211,7 +211,7 @@ export default function Home() {
                     <p className="pb-5 text-center text-[16px] leading-[28px] w-[92%]">
                       {e.content}
                     </p>
-                    <button className="w-[165px] h-[58px] border border-white rounded-[100px] p-5 uppercase text-white flex justify-center items-center">
+                    <button className="w-[165px] h-[58px] border-2 border-white rounded-[100px] p-5 uppercase text-white flex justify-center items-center font-bold tracking-[2.2px]">
                       view More
                     </button>
                   </div>
