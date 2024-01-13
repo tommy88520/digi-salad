@@ -1,10 +1,7 @@
 const withVideos = require("next-videos");
 
-module.exports = withVideos({
-  webpack(config, options) {
-    return config;
-  },
+module.exports = {
   images: {
     domains: ["uploadthing.com", "utfs.io"],
   },
-});
+};

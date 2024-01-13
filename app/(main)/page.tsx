@@ -171,13 +171,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <video
-                  src={require('@/videos/DigiSalad Website Video-v3.mp4')}
+               <video
                   autoPlay
                   muted
                   loop
+                  src={"https://utfs.io/f/806af516-16a3-4ad3-a577-a57bd2920ef9-1v6fae.mp4"}
                   className="absolute z-[-2] h-[940px] w-full object-cover"
-              />
+                />
             </div>
             
             <div className="h-full w-full bg-[#000000] bg-opacity-30 z-[-10] absolute"/>
@@ -214,13 +214,21 @@ export default function Home() {
             </div>
             <div className="flex flex-col justify-center items-center">
               <div className="w-full flex justify-center items-center relative cursor" onClick={playVideo}>
-                <video
+                {/* <video
                   ref={videoRef}
                   src="/_next/static/videos/DigiSalad Website Video-v3-ea91612166c5adc48d7baf351b6a8012.mp4"
                   autoPlay
                   muted
                   loop
                   className="h-[544px] w-[90%] md:w-[67%] object-cover mt-[70px] cursor-pointer"
+                /> */}
+                <video
+                  // poster={data?.thumbnailUrl}
+                  autoPlay
+                  muted
+                  loop
+                  src={"https://utfs.io/f/806af516-16a3-4ad3-a577-a57bd2920ef9-1v6fae.mp4"}
+                  className="w-full brightness-[60%] object-cover h-full"
                 />
                 <Image
                   src="https://utfs.io/f/46382f95-e401-4a06-aaef-12bfe3a95095-qqupd4.svg"
