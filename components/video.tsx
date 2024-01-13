@@ -3,7 +3,7 @@ import Video from 'next-video';
 interface TVideoProps {
   src: string;
 }
-const TVideo = ({ src }: any) => {
+const TVideo = ({ src }: TVideoProps) => {
 
   return ( 
     <div className="">
