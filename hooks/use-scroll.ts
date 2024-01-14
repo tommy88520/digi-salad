@@ -8,10 +8,8 @@ export const useScroll = () =>{
     (e:any) => {
       const window = e.currentTarget;
       if (y > window.scrollY) {
-        // console.log("scrolling up");
         setScrollDir('up')
       } else if (y < window.scrollY) {
-        // console.log("scrolling down");
         setScrollDir('down')
       }
       setY(window.scrollY);
@@ -25,7 +23,7 @@ export const useScroll = () =>{
   useEffect(() => {
     window.addEventListener("scroll", (e) => handleNavigation(e));
   
-    return () => { // return a cleanup function to unregister our function since it will run multiple times
+    return () => { 
       window.removeEventListener("scroll", (e) => handleNavigation(e));
     };
   }, [y]);

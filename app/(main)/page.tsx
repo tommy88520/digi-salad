@@ -6,8 +6,6 @@ import TSwiper from "@/components/swiper/swiper";
 import { cn } from '@/lib/utils'
 import { services, awards } from '@/data/data'
 
-
-
 export default function Home() {
 
   const [ videoPause, setVideoPause ] = useState<boolean>(true)

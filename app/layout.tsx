@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { AOSInit } from './aos'
+
 import './globals.css'
 import "aos/dist/aos.css";
 
